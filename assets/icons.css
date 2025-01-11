@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wp2rvv');
+  src:  url('fonts/icomoon.eot?wp2rvv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wp2rvv') format('truetype'),
+    url('fonts/icomoon.woff?wp2rvv') format('woff'),
+    url('fonts/icomoon.svg?wp2rvv#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-left1:before {
+  content: "\e90d";
+}
+.icon-miscellaneous_services:before {
+  content: "\e90a";
+}
+.icon-moon1:before {
+  content: "\e900";
+}
+.icon-arrow-long-right:before {
+  content: "\e909";
+}
+.icon-menu:before {
+  content: "\e90f";
+}
+.icon-chevron-left:before {
+  content: "\e90c";
+}
+.icon-chevron-right:before {
+  content: "\e90b";
+}
+.icon-envelope:before {
+  content: "\e906";
+}
+.icon-link:before {
+  content: "\e903";
+}
+.icon-half-moon:before {
+  content: "\e905";
+}
+.icon-bootstrap:before {
+  content: "\e915";
+  color: #563d7c;
+}
+.icon-css3:before {
+  content: "\e90e";
+  color: #1572b6;
+}
+.icon-github:before {
+  content: "\e904";
+}
+.icon-gmail:before {
+  content: "\e908";
+  color: #d14836;
+}
+.icon-html5:before {
+  content: "\e911";
+  color: #e34f26;
+}
+.icon-java:before {
+  content: "\e912";
+  color: #007396;
+}
+.icon-javascript:before {
+  content: "\e901";
+  color: #f7df1e;
+}
+.icon-next-dot-js:before {
+  content: "\e910";
+}
+.icon-postman:before {
+  content: "\e913";
+  color: #ff6c37;
+}
+.icon-react:before {
+  content: "\e902";
+  color: #61dafb;
+}
+.icon-sass:before {
+  content: "\e914";
+  color: #c69;
+}
+.icon-tailwindcss:before {
+  content: "\e916";
+  color: #38b2ac;
+}
+.icon-typescript:before {
+  content: "\e917";
+  color: #007acc;
+}
+.icon-whatsapp:before {
+  content: "\e907";
+  color: #25d366;
+}
+.icon-stopwatch:before {
+  content: "\e952";
+}
+.icon-sun:before {
+  content: "\e9d4";
+}
+.icon-moon:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-arrow-up2:before {
+  content: "\ea3a";
+}
+.icon-arrow-down2:before {
+  content: "\ea3e";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}

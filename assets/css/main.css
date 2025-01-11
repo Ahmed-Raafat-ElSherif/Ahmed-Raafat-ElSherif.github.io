@@ -156,7 +156,8 @@ h6 {
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background: linear-gradient(45deg, #326975, #212f6b);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -731,6 +732,12 @@ section,
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
+
+.skills .skills-content  {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 6rem;
+  }
 
 .skills .skills-content h5 {
   font-size: 18px;
@@ -1626,4 +1633,22 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Footer edited by hesham
+--------------------------------------------------------------*/
+.button-whatsapp{
+  transition:0.6s;
+}
+.button-whatsapp:hover{
+  box-shadow: 0 4px 9px 1px green;
+  background: radial-gradient(#17ba7e, lightgreen);
+  animation: buttonMove 3s linear infinite;
+}
+@keyframes buttonMove{
+  to{
+    background-position: 150px;
+    /* background-size: 100%; */
+  }
 }
