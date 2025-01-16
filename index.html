@@ -1176,6 +1176,8 @@
             var data = new FormData(event.target);            
             loading.style.display = 'block';
             status.style.display = 'none';
+            loading.classList.remove("d-n");
+
             // errorMessage.style.display = 'none';
             fetch(event.target.action, {
               method: form.method,
@@ -1186,7 +1188,6 @@
             }).then(response => {
               
               if (response.ok) {
-                loading.classList.remove("d-block");
                 loading.classList.add("d-n");
                 status.style.display = 'block';
                 form.reset();
@@ -1219,7 +1220,7 @@
             <span>Text me on</span>
             <i class="bi bi-whatsapp"></i>
           </a>
-        </div>
+          
     <!-- /Contact Section -->
   </main>
 
