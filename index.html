@@ -1173,7 +1173,7 @@
             var status = document.querySelector(".sent-message");
             // var errorMessage = document.querySelector(".error-message");
             var loading = document.querySelector(".loading");
-            var data = new FormData(event.target);
+            var data = new FormData(event.target);            
             loading.style.display = 'block';
             status.style.display = 'none';
             // errorMessage.style.display = 'none';
@@ -1184,19 +1184,23 @@
                 'Accept': 'application/json'
               }
             }).then(response => {
-              loading.style.display = 'none';
+              
               if (response.ok) {
+                loading.classList.remove("d-block");
+                loading.classList.add("d-n");
                 status.style.display = 'block';
                 form.reset();
               } else {
-                response.json().then(data => {
-                  // if (Object.hasOwn(data, 'errors')) {
-                  //   // errorMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                  // } else {
-                  //   errorMessage.innerHTML = "Oops! There was a problem submitting your form";
-                  // }
-                  // errorMessage.style.display = 'block';
-                });
+                console.log(error);
+                
+                // response.json().then(data => {
+                //   if (Object.hasOwn(data, 'errors')) {
+                //     errorMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                //   } else {
+                //     errorMessage.innerHTML = "Oops! There was a problem submitting your form";
+                //   }
+                //   errorMessage.style.display = 'block';
+                // });
               }
             }).catch(error => {
               loading.style.display = 'none';
@@ -1209,13 +1213,13 @@
               <!-- End Contact Form -->
               </section>
             <!-- whatapp -->
-
-        <div class="w-100 d-flex justify-content-center mt-5">
+        <div class="w-100 d-flex justify-content-center mt-5 text-me">
           <a class="bg-primary text-white rounded-5 p-4 mx-auto button-whatsapp d-flex gap-2"
             href="https://wa.me/201289894744?">
             <span>Text me on</span>
             <i class="bi bi-whatsapp"></i>
           </a>
+        </div>
     <!-- /Contact Section -->
   </main>
 
@@ -1239,6 +1243,7 @@
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://www.linkedin.com/in/ahmed-raafat-elsherif/">AHMED</a>
+        <i style="color: white; display: block; font-size: 3rem; opacity: 0.9;">Thank you for your time</i>
       </div>
     </div>
 
