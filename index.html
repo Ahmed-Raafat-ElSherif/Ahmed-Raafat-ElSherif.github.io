@@ -1165,52 +1165,6 @@
           </div>
         </form>
 
-        <script>
-          var form = document.getElementById("my-form");
-
-          async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.querySelector(".sent-message");
-            // var errorMessage = document.querySelector(".error-message");
-            var loading = document.querySelector(".loading");
-            var data = new FormData(event.target);            
-            loading.style.display = 'block';
-            status.style.display = 'none';
-            loading.classList.remove("d-n");
-
-            // errorMessage.style.display = 'none';
-            fetch(event.target.action, {
-              method: form.method,
-              body: data,
-              headers: {
-                'Accept': 'application/json'
-              }
-            }).then(response => {
-              
-              if (response.ok) {
-                loading.classList.add("d-n");
-                status.style.display = 'block';
-                form.reset();
-              } else {
-                console.log(error);
-                
-                // response.json().then(data => {
-                //   if (Object.hasOwn(data, 'errors')) {
-                //     errorMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                //   } else {
-                //     errorMessage.innerHTML = "Oops! There was a problem submitting your form";
-                //   }
-                //   errorMessage.style.display = 'block';
-                // });
-              }
-            }).catch(error => {
-              loading.style.display = 'none';
-              errorMessage.innerHTML = "Oops! There was a problem submitting your form";
-              errorMessage.style.display = 'block';
-            });
-          }
-          form.addEventListener("submit", handleSubmit);
-        </script>
               <!-- End Contact Form -->
               <div class="w-100 d-flex justify-content-center mt-5">
                 <a class="bg-primary text-white rounded-5 p-4 mx-auto button-whatsapp d-flex gap-2"
@@ -1221,6 +1175,7 @@
               </div>
               </section>
             <!-- whatapp -->
+
 
     <!-- /Contact Section -->
   </main>
@@ -1271,6 +1226,52 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.querySelector(".sent-message");
+      // var errorMessage = document.querySelector(".error-message");
+      var loading = document.querySelector(".loading");
+      var data = new FormData(event.target);            
+      loading.style.display = 'block';
+      status.style.display = 'none';
+      loading.classList.remove("d-n");
+
+      // errorMessage.style.display = 'none';
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        
+        if (response.ok) {
+          loading.classList.add("d-n");
+          status.style.display = 'block';
+          form.reset();
+        } else {
+          console.log(error);
+          
+          // response.json().then(data => {
+          //   if (Object.hasOwn(data, 'errors')) {
+          //     errorMessage.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          //   } else {
+          //     errorMessage.innerHTML = "Oops! There was a problem submitting your form";
+          //   }
+          //   errorMessage.style.display = 'block';
+          // });
+        }
+      }).catch(error => {
+        loading.style.display = 'none';
+        errorMessage.innerHTML = "Oops! There was a problem submitting your form";
+        errorMessage.style.display = 'block';
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 
